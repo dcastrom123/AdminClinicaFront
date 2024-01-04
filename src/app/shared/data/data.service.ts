@@ -195,7 +195,7 @@ export class DataService {
   }
   public sideBar = [
     {
-      tittle: 'Main',
+      tittle: 'Menu',
       showAsTab: false,
       separateRoute: false,
       menu: [
@@ -349,21 +349,21 @@ export class DataService {
           ],
         },
         {
-          menuValue: 'Doctors',
+          menuValue: 'Doctores',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'doctor',
           img: 'assets/img/icons/menu-icon-02.svg',
           subMenus: [
             {
-              menuValue: 'Add Doctor',
+              menuValue: 'Agregar Doctor',
               route: routes.addDoctor,
               base: routes.addDoctor,
               permision: 'register_doctor',
               show_nav: true,
             },
             {
-              menuValue: 'Doctor List',
+              menuValue: 'Lista Doctores',
               route: routes.doctorsList,
               base: routes.doctorsList,
               permision: 'list_doctor',
@@ -393,21 +393,21 @@ export class DataService {
           ],
         },
         {
-          menuValue: 'Patients',
+          menuValue: 'Pacientes',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'patient',
           img: 'assets/img/icons/menu-icon-03.svg',
           subMenus: [
             {
-              menuValue: 'Add Patients',
+              menuValue: 'Agregar Paciente',
               route: routes.addPatient,
               base: routes.addPatient,
               permision: 'register_patient',
               show_nav: true,
             },
             {
-              menuValue: 'Patients List',
+              menuValue: 'Lista de Pacientes',
               route: routes.patientsList,
               base: routes.patientsList,
               permision: 'list_patient',
@@ -428,7 +428,7 @@ export class DataService {
               show_nav: false,
             },
             {
-              menuValue: 'Patients Profile',
+              menuValue: 'Perfil del Paciente',
               route: '',
               base: '',
               permision: 'profile_patient',
@@ -437,21 +437,21 @@ export class DataService {
           ],
         },
         {
-          menuValue: 'Appointments',
+          menuValue: 'Agenda',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'appointments',
           img: 'assets/img/icons/menu-icon-04.svg',
           subMenus: [
             {
-              menuValue: 'Register Appointment',
+              menuValue: 'Reserva de hora',
               route: routes.addAppointment,
               base: routes.addAppointment,
               permision: 'register_appointment',
               show_nav: true,
             },
             {
-              menuValue: 'Appointment List',
+              menuValue: 'Listar reservas',
               route: routes.appointmentList,
               base: routes.appointmentList,
               permision: 'list_appointment',
@@ -518,7 +518,7 @@ export class DataService {
           ],
         },
         {
-          menuValue: 'Calendar',
+          menuValue: 'Calendario',
           route: routes.calendar,
           hasSubRoute: false,
           showSubRoute: false,

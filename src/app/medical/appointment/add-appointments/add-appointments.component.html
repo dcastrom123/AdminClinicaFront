@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Appointment </a></li>
+                        <li class="breadcrumb-item"><a href="#">Agenda</a></li>
                         <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
-                        <li class="breadcrumb-item active">Add Appointment</li>
+                        <li class="breadcrumb-item active">Reserva de hora</li>
                     </ul>
                 </div>
             </div>
@@ -23,12 +23,12 @@
                             <div class="row align-items-center">
                                 <div class="col-12">
                                     <div class="form-heading">
-                                        <h4>Appointment Add</h4>
+                                        <h4>Reserva de hora medica</h4>
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-3">  
                                     <div class="form-group local-forms">
-                                        <label >Date Of Appointment  <span class="login-danger">*</span></label>
+                                        <label >Fecha  <span class="login-danger">*</span></label>
                                         <input class="form-control datetimepicker" [(ngModel)]="date_appointment" name="birth_date" type="text" matInput [matDatepicker]="picker"  >
                                         <mat-datepicker #picker></mat-datepicker>
                                         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -46,7 +46,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-3">
                                     <div class="form-group local-forms">
-                                        <label >Specialities <span class="login-danger">*</span></label>
+                                        <label >Especialidades <span class="login-danger">*</span></label>
                                         <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Select  Speciality">
                                             <mat-option *ngFor="let data of specialities" [value]="data.id">
                                             {{data.name}}
@@ -159,14 +159,14 @@
 
                                 <div class="col-12 col-md-6 col-xl-4">
                                     <div class="form-group local-forms">
-                                        <label >Surname <span class="login-danger">*</span></label>
+                                        <label >Apellido <span class="login-danger">*</span></label>
                                         <input class="form-control" [(ngModel)]="surname" name="surname" type="text"  >
                                     </div>
                                 </div>
 
                                 <div class="col-12 col-md-6 col-xl-4">
                                     <div class="form-group local-forms">
-                                        <label >Mobile <span class="login-danger">*</span></label>
+                                        <label >Celular <span class="login-danger">*</span></label>
                                         <input class="form-control" [(ngModel)]="mobile" name="mobile" type="text"  >
                                     </div>
                                 </div>
@@ -214,22 +214,27 @@
                                             <mat-option value="TRANSFERENCIA">
                                                 TRANSFERENCIA
                                             </mat-option>
-                                            <mat-option value="YAPE">
-                                                YAPE
-                                            </mat-option>
-                                            <mat-option value="PLIN">
-                                                PLIN
-                                            </mat-option>
+                                            <!--
+                                                <mat-option value="YAPE">
+                                                    YAPE
+                                                </mat-option>
+                                                <mat-option value="PLIN">
+                                                    PLIN
+                                                </mat-option>
+
+                                            -->
                                         </mat-select>
                                     </div>
                                 </div>
+                                
 
-                                <div class="col-12 col-md-6 col-xl-4">
-                                    <div class="form-group local-forms">
-                                        <label >Monto de adelanto <span class="login-danger">*</span></label>
-                                        <input class="form-control" [(ngModel)]="amount_add" name="amount_add"  type="number"  >
+                                    <div class="col-12 col-md-6 col-xl-4">
+                                        <div class="form-group local-forms">
+                                            <label >Monto de adelanto <span class="login-danger">*</span></label>
+                                            <input class="form-control" [(ngModel)]="amount_add" name="amount_add"  type="number"  >
+                                        </div>
                                     </div>
-                                </div>
+                                
 
                                 
                             </div>
