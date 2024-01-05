@@ -37,7 +37,7 @@
                                 <div class="col-12 col-md-6 col-xl-3">
                                     <div class="form-group local-forms">
                                         <label >Hora <span class="login-danger">*</span></label>
-                                        <mat-select [(ngModel)]="hour" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Select  Hour">
+                                        <mat-select [(ngModel)]="hour" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar">
                                             <mat-option *ngFor="let data of hours" [value]="data.id">
                                             {{data.name}}
                                             </mat-option>
@@ -47,7 +47,7 @@
                                 <div class="col-12 col-md-6 col-xl-3">
                                     <div class="form-group local-forms">
                                         <label >Especialidades <span class="login-danger">*</span></label>
-                                        <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Select  Speciality">
+                                        <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar">
                                             <mat-option *ngFor="let data of specialities" [value]="data.id">
                                             {{data.name}}
                                             </mat-option>
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="col-12 col-md-6 col-xl-4">  
                                     <div class="form-group local-forms">
-                                        <label >First Name <span class="login-danger">*</span></label>
+                                        <label >Nombre<span class="login-danger">*</span></label>
                                         <input class="form-control" [(ngModel)]="name" name="name" type="text"  >
                                     </div>
                                 </div>

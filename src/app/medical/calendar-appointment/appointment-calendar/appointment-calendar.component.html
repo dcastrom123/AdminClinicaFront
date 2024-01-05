@@ -3,9 +3,9 @@
         <div class="row">
             <div class="col-sm-8 col-12">
                 <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#" onclick="return false;">Apoointment </a></li>
+                    <li class="breadcrumb-item"><a href="#" onclick="return false;">Agenda </a></li>
                     <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
-                    <li class="breadcrumb-item active">Calendar</li>
+                    <li class="breadcrumb-item active">Calendario</li>
                 </ul>
             </div>
             <div class="col-sm-4 col-12 text-end m-b-30">
@@ -17,20 +17,20 @@
                 <div class="row">
                     <div class="col-12 col-md-6 col-xl-3" *ngIf="!isPermited()">  
                         <div class="form-group local-forms">
-                            <label >Doctor Name </label>
+                            <label >Doctor </label>
                             <input class="form-control" [(ngModel)]="search_doctor" name="search_doctor" type="text"  >
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-3">  
                         <div class="form-group local-forms">
-                            <label >Patient Name </label>
+                            <label >Paciente </label>
                             <input class="form-control" [(ngModel)]="search_patient" name="search_patient" type="text"  >
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-xl-3" *ngIf="!isPermited()">
                         <div class="form-group local-forms">
-                            <label >Specialities </label>
-                            <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Select Specialitie">
+                            <label >Especialidad </label>
+                            <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Selecciona Especialidad">
                               <mat-option *ngFor="let data of specialities" [value]="data.id">
                               {{data.name}}
                               </mat-option>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-12 col-md-6 col-xl-3">
                         <div class="doctor-submit">
-                            <button type="button" class="btn btn-primary submit-list-form me-2" (click)="searchData()">Search</button>
+                            <button type="button" class="btn btn-primary submit-list-form me-2" (click)="searchData()">Buscar</button>
                         </div>
                     </div>
                 </div>

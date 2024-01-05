@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Appointments </a></li>
+                        <li class="breadcrumb-item"><a href="#">Agenda </a></li>
                         <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
-                        <li class="breadcrumb-item active">Appointment List</li>
+                        <li class="breadcrumb-item active">Horas agendadas</li>
                     </ul>
                 </div>
             </div>
@@ -26,10 +26,10 @@
                             <div class="row align-items-center">
                                 <div class="col">
                                     <div class="doctor-table-blk">
-                                        <h3>Appointment List</h3>
+                                        <h3>Horas Agendadas</h3>
                                         <div class="doctor-search-blk">
                                             <div class="top-nav-search table-search-blk">
-                                                    <input  class="form-control" placeholder="Search here" [(ngModel)]="searchDataValue"
+                                                    <input  class="form-control" placeholder="Buscar" [(ngModel)]="searchDataValue"
                                                     (keyup.enter)="searchData()">
                                                     <a class="btn"><img src="assets/img/icons/search-normal.svg" alt=""></a>
                                             </div>
@@ -38,8 +38,8 @@
                                 </div>
                                 <div class="col">
                                     <div class="form-group local-forms" *ngIf="!isPermited()">
-                                        <label >Specialities <span class="login-danger">*</span></label>
-                                        <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Select  Speciality">
+                                        <label >Especialidades <span class="login-danger">*</span></label>
+                                        <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Seleccionar">
                                             <mat-option *ngFor="let data of specialities" [value]="data.id">
                                             {{data.name}}
                                             </mat-option>
@@ -101,10 +101,10 @@
                                                 <a href="javascript:void(0);" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end">
                                                   <!--  -->
-                                                    <a class="dropdown-item" *ngIf="isPermision('edit_appointment')" [routerLink]="[ '/appointment-m/list/edit/', data.id ]" ><i class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
+                                                    <a class="dropdown-item" *ngIf="isPermision('edit_appointment')" [routerLink]="[ '/appointment-m/list/edit/', data.id ]" ><i class="fa-solid fa-pen-to-square m-r-5"></i> Editar</a>
                                                     <a class="dropdown-item" *ngIf="isPermision('delete_appointment')" href="javascript:void(0);" (click)="selectUser(data)" data-bs-toggle="modal" 
                                                     [attr.data-bs-target]="'#delete_staff-'+data.id"
-                                                    ><i class="fa fa-trash-alt m-r-5"></i> Delete</a>
+                                                    ><i class="fa fa-trash-alt m-r-5"></i> Borrar</a>
 
                                                     <a class="dropdown-item" *ngIf="isPermision('attention_appointment')" [routerLink]="[ '/appointment-m/list/atencion-medica/', data.id ]"
                                                     ><img src="assets/img/icons/doctor-dash-01.svg" style="background: #000;" alt=""> Atención</a>

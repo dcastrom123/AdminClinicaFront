@@ -200,7 +200,7 @@ export class DataService {
       separateRoute: false,
       menu: [
         {
-          menuValue: 'Dashboard',
+          menuValue: 'Panel',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'dashboard',
@@ -208,14 +208,14 @@ export class DataService {
           img: 'assets/img/icons/menu-icon-01.svg',
           subMenus: [
             {
-              menuValue: 'Admin Dashboard',
+              menuValue: 'Panel Administrador',
               route: routes.adminDashboard,
               base: routes.adminDashboard,
               permision: 'admin_dashboard',
               show_nav: true,
             },
             {
-              menuValue: 'Doctor Dashboard',
+              menuValue: 'Panel Doctor',
               route: routes.doctorDashboard,
               base: routes.doctorDashboard,
               permision: 'doctor_dashboard',
@@ -268,7 +268,7 @@ export class DataService {
               show_nav: false,
             },
           ],
-        },
+        },/*
         {
           menuValue: 'Staff',
           hasSubRoute: true,
@@ -310,7 +310,7 @@ export class DataService {
             //   base: routes.staffAttendance,
             // },
           ],
-        },
+        },*/
         {
           menuValue: 'Especialidades',
           hasSubRoute: true,
@@ -319,14 +319,14 @@ export class DataService {
           img: 'assets/img/icons/menu-icon-06.svg',
           subMenus: [
             {
-              menuValue: 'Especialidad List',
+              menuValue: 'Lista Especialidades',
               route: routes.departmentList,
               base: routes.departmentList,
               permision: 'list_specialty',
               show_nav: true,
             },
             {
-              menuValue: 'Add Especialidad',
+              menuValue: 'Agregar Especialidad',
               route: routes.addDepartment,
               base: routes.addDepartment,
               permision: 'register_specialty',
@@ -432,7 +432,7 @@ export class DataService {
               route: '',
               base: '',
               permision: 'profile_patient',
-              show_nav: false,
+              show_nav: true,
             },
           ],
         },
@@ -495,7 +495,7 @@ export class DataService {
               show_nav: true,
             },
             {
-              menuValue: 'Edit Pagos',
+              menuValue: 'Editar Pagos',
               route: '',
               base: '',
               permision: 'edit_payment',
@@ -509,7 +509,7 @@ export class DataService {
               show_nav: false,
             },
             {
-              menuValue: 'Add Pagos',
+              menuValue: 'Agregar Pagos',
               route: '',
               base: '',
               permision: 'add_payment',
@@ -565,7 +565,7 @@ export class DataService {
         //   ],
         // },
         {
-          menuValue: 'Settings',
+          menuValue: 'Config',
           route: routes.settings,
           hasSubRoute: false,
           showSubRoute: false,

@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#" onclick="return false;">Doctors </a></li>
+                        <li class="breadcrumb-item"><a href="#" onclick="return false;">Doctor </a></li>
                         <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
-                        <li class="breadcrumb-item active">Doctors Profile</li>
+                        <li class="breadcrumb-item active">Perfil Doctor</li>
                     </ul>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="about-info">
-                                    <h4>Doctors Profile  <span><a href="javascript:;"><i class="feather icon-more-vertical"></i></a></span></h4>
+                                    <h4>Perfil Doctor <span><a href="javascript:;"><i class="feather icon-more-vertical"></i></a></span></h4>
                                 </div>
                                 <div class="doctor-profile-head">
                                     <!-- <div class="profile-bg-img">
@@ -49,23 +49,23 @@
                                         <div class="col-lg-4 col-md-4 d-flex align-items-center">
                                             <div class="follow-group">
                                                 <div class="doctor-follows">
-                                                    <h5>Appointment</h5>
+                                                    <h5>Agenda</h5>
                                                     <h4>{{ num_appointment }}</h4>
                                                 </div>
                                                 <div class="doctor-follows">
-                                                    <h5>Money</h5>
-                                                    <h4>{{ money_of_appointments }} PEN</h4>
+                                                    <h5>Dinero</h5>
+                                                    <h4>{{ money_of_appointments }} CLP</h4>
                                                 </div>
                                                 <div class="doctor-follows">
-                                                    <h5>Appointment Pendings</h5>
+                                                    <h5>Agenda Pendiente</h5>
                                                     <h4>{{ num_appointment_pendings }}</h4>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-4 col-md-4 d-flex align-items-center">
                                             <div class="follow-btn-group">
-                                                <a [routerLink]="[ '/doctors/list/edit/', doctor_id ]" class="btn btn-info follow-btns">Edit</a>
-                                                <button type="submit" class="btn btn-info message-btns">Message</button>
+                                                <a [routerLink]="[ '/doctors/list/edit/', doctor_id ]" class="btn btn-info follow-btns">Editar</a>
+                                                <button type="submit" class="btn btn-info message-btns">Mensaje</button>
                                             </div>
                                         </div>
                                     </div>
@@ -80,18 +80,18 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="heading-detail ">
-                                        <h4 class="mb-3">About me</h4>
+                                        <h4 class="mb-3">Sobre mi</h4>
                                         <p>Hello I am Smith Bruklin a Gynaecologist in Sanjivni Hospital Surat. I love to work with all my hospital staff and seniour doctors.</p>
                                     </div>
                                     <div class="about-me-list">
                                         <ul class="list-space">
                                             <li>
-                                                <h4>Gender</h4>
+                                                <h4>Genero</h4>
                                                 <span *ngIf="doctor_selected.gender == 2">Femenino</span>
                                                 <span *ngIf="doctor_selected.gender == 1">Masculino</span>
                                             </li>
                                             <li>
-                                                <h4>Education</h4>
+                                                <h4>Educacion</h4>
                                                 <span>{{ doctor_selected.education }}</span>
                                             </li>
                                             <li>
@@ -109,7 +109,7 @@
                                     <div class="about-me-list">
                                         <ul class="list-space">
                                             <li>
-                                                <h4>Birth Day</h4>
+                                                <h4>Fecha cumpleaños</h4>
                                                 <span>{{ doctor_selected.birth_date }}</span>
                                             </li>
                                             
@@ -118,7 +118,7 @@
                                                 <span>{{ doctor_selected.email }}</span>
                                             </li>
                                             <li>
-                                                <h4>Mobile</h4>
+                                                <h4>Telefono</h4>
                                                 <span>{{ doctor_selected.mobile }}</span>
                                             </li>
                                             <li>
@@ -167,7 +167,7 @@
                                                                     <span class="time">{{ appointment.format_hour_start + ' - ' + appointment.format_hour_end}}</span>
                                                                 </div>
                                                                 <div class="comman-activitys flex-grow-1">
-                                                                    <h3>{{ appointment.patient.full_name }} <span> MONTO : {{ appointment.amount }}  PEN.</span></h3>
+                                                                    <h3>{{ appointment.patient.full_name }} <span> MONTO : {{ appointment.amount }}  CLP.</span></h3>
                                                                     <p *ngIf="appointment.appointment_attention">
                                                                         {{ appointment.appointment_attention.description }}
                                                                     </p>

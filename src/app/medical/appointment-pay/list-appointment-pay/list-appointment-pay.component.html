@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#" onclick="return false;">Appointment Pays </a></li>
+                        <li class="breadcrumb-item"><a href="#" onclick="return false;">Pagos </a></li>
                         <li class="breadcrumb-item"><i class="feather icon-chevron-right"></i></li>
-                        <li class="breadcrumb-item active">Pays</li>
+                        <!--<li class="breadcrumb-item active">Pays</li>-->
                     </ul>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                             <div class="row align-items-center">
                                 <div class="col">
                                     <div class="doctor-table-blk">
-                                        <h3>Pays</h3>
+                                        <h3></h3>
                                         <!-- <div class="doctor-search-blk">
                                             <div class="top-nav-search table-search-blk">
                                                     <input type="text" class="form-control" placeholder="Search here" [(ngModel)]="searchDataValue"
@@ -55,20 +55,20 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6 col-xl-4" *ngIf="!isPermited()">  
                                         <div class="form-group local-forms">
-                                            <label >Doctor Name </label>
+                                            <label >Doctor</label>
                                             <input class="form-control" [(ngModel)]="searchDataDoctor" name="searchDataDoctor" type="text"  >
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4">  
                                         <div class="form-group local-forms">
-                                            <label >Patient Name </label>
+                                            <label >Paciente</label>
                                             <input class="form-control" [(ngModel)]="searchDataValue" name="searchDataValue" type="text"  >
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4" *ngIf="!isPermited()">
                                         <div class="form-group local-forms">
-                                            <label >Specialities </label>
-                                            <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Select Specialitie">
+                                            <label >Especialidad </label>
+                                            <mat-select [(ngModel)]="specialitie_id" [ngModelOptions]="{standalone: true}" class="form-control select"  placeholder="Selecciona especialidad">
                                               <mat-option *ngFor="let data of specialities" [value]="data.id">
                                               {{data.name}}
                                               </mat-option>
@@ -87,7 +87,7 @@
                                     </div> -->
                                     <div class="col-12 col-md-6 col-xl-4">
                                         <div class="form-group local-forms">
-                                            <label >From </label>
+                                            <label >desde</label>
                                             <!-- <input class="form-control datetimepicker" [(ngModel)]="date_start" name="date_start" type="text" matInput [matDatepicker]="picker1" >
                                             <mat-datepicker #picker1></mat-datepicker>
                                             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle> -->
@@ -96,7 +96,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4">
                                         <div class="form-group local-forms">
-                                            <label >To </label>
+                                            <label >Hasta</label>
                                             <!-- <input class="form-control datetimepicker" [(ngModel)]="date_end" name="date_end" type="text" matInput [matDatepicker]="picker2"  >
                                             <mat-datepicker #picker2></mat-datepicker>
                                             <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle> -->
@@ -105,7 +105,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 col-xl-4">
                                         <div class="doctor-submit">
-                                            <button type="button" class="btn btn-primary submit-list-form me-2" (click)="searchData()">Search</button>
+                                            <button type="button" class="btn btn-primary submit-list-form me-2" (click)="searchData()">Buscar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +121,7 @@
                                         <th mat-sort-header="mobile">Fecha</th>
                                         <th mat-sort-header="birth_date">Hora</th>
                                         <th mat-sort-header="n_document">Especialidad</th>
-                                        <th mat-sort-header="state">Status Pay</th>
+                                        <th mat-sort-header="state">Estado Pago</th>
                                         <th mat-sort-header="created_at">Costo de la cita</th>
                                         <!-- <th ></th> -->
                                     </tr>
@@ -138,7 +138,7 @@
                                             <td>
                                                 <button [ngClass]="{'status-green' : data.status_pay === 1, 'status-pink' : data.status_pay === 2}" class="custom-badge">{{data.status_pay == 1 ? 'PAGADO' : 'DEUDA'}}</button>
                                             </td>
-                                            <td>{{data.amount }} PEN</td>
+                                            <td>{{data.amount }} CLP</td>
                                             
     
                                         </tr>
@@ -156,7 +156,7 @@
                                             <td></td>
                                             <td>#{{ payment.id }}</td>
                                             <td>{{ payment.method_payment }}</td>
-                                            <td>{{ payment.amount }} PEN</td>
+                                            <td>{{ payment.amount }} CLP</td>
                                             <td>
                                                 <div class="dropdown dropdown-action" >
                                                     <a href="javascript:void(0);" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -169,7 +169,7 @@
                                                         <ng-container *ngIf="isPermision('delete_payment')" >
                                                             <a class="dropdown-item"  href="javascript:void(0);" (click)="selectEditPayment(payment)" data-bs-toggle="modal" 
                                                             [attr.data-bs-target]="'#delete_payment-'+payment.id"
-                                                            ><i class="fa fa-trash-alt m-r-5"></i> Delete</a>
+                                                            ><i class="fa fa-trash-alt m-r-5"></i> Borrar</a>
                                                         </ng-container>
 
                                                     </div>
@@ -180,8 +180,8 @@
                                                             <div class="modal-body text-center">
                                                                 <img src="assets/img/sent.png" alt="" width="50" height="46">
                                                                 <h3 *ngIf="payment_selected">Are you sure want to delete this payment {{ payment_selected.id }}?</h3>
-                                                                <div class="m-t-20"> <a href="javascript:void(0);" class="btn btn-white me-1" data-bs-dismiss="modal">Close</a>
-                                                                    <button type="submit" class="btn btn-danger" (click)="deleteAppointmentPay(data)">Delete</button>
+                                                                <div class="m-t-20"> <a href="javascript:void(0);" class="btn btn-white me-1" data-bs-dismiss="modal">Cerrar</a>
+                                                                    <button type="submit" class="btn btn-danger" (click)="deleteAppointmentPay(data)">Borrar</button>
                                                                 </div>
                                                             </div>
                                                         </div>
