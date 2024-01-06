@@ -26,13 +26,11 @@
                         </mat-select>
                     </div>
                     <div class="morning-user">
-                        <h2>Good Morning, <span>Dr.Smith Wayne</span></h2>
-                        <p>Have a nice day at work</p>
+                        <h2>Bienvenido</h2>
                     </div>
                 </div>
                 <div class="col-md-6 position-blk">
                     <div class="morning-img">
-                        <img src="assets/img/morning-img-02.png" alt="">
                     </div>
                 </div>
             </div>
@@ -51,42 +49,11 @@
                                 <span class="status-green" *ngIf="porcentaje_d >= 0">+{{ porcentaje_d }}%</span>
                                 <span class="status-pink" *ngIf="porcentaje_d < 0">{{ porcentaje_d }}%</span>
                             </h4>
-                            <h5>Appointments</h5>
+                            <h5>Reservas Realizadas</h5>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-xl-3 col-md-6">
-                    <div class="doctor-widget border-right-bg">
-                        <div class="doctor-box-icon flex-shrink-0">
-                            <img src="assets/img/icons/doctor-dash-03.svg" alt="">
-                        </div>
-                        <div class="doctor-content dash-count flex-grow-1">
-                            <!-- [countUp]="12" [options]="{duration: 10}" -->
-                            <h4><span class="counter-up" >{{ num_appointments_attetion_current }}</span><span>/{{ num_appointments_attetion_before }}</span>
-                                <span class="status-green" *ngIf="porcentaje_da >= 0">+{{ porcentaje_da }}%</span>
-                                <span class="status-pink" *ngIf="porcentaje_da < 0">{{ porcentaje_da }}%</span>
-                            </h4>
-                            <h5>Attetion</h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-md-6">
-                    <div class="doctor-widget">
-                        <div class="doctor-box-icon flex-shrink-0">
-                            <img src="assets/img/icons/doctor-dash-04.svg" alt="">
-                        </div>
-                        <div class="doctor-content dash-count flex-grow-1">
-                            <!-- [countUp]="530" [options]="{duration: 10}" -->
-                            <h4>$<span class="counter-up" >{{ num_appointments_total_pay_current }}</span><span> /{{ num_appointments_total_pay_before }} </span>
-                                <span class="status-green" *ngIf="porcentaje_dt >= 0">+{{ porcentaje_dt }}%</span>
-                                <span class="status-pink" *ngIf="porcentaje_dt < 0">{{ porcentaje_dt }}%</span>
-                            </h4>
-                            <h5>Earnings +</h5>
-                        </div>
-                    </div>
-                </div>
+ 
 
                 <div class="col-xl-3 col-md-6">
                     <div class="doctor-widget">
@@ -99,21 +66,22 @@
                                 <span class="status-green" *ngIf="porcentaje_dtp >= 0">+{{ porcentaje_dtp }}%</span>
                                 <span class="status-pink" *ngIf="porcentaje_dtp < 0">{{ porcentaje_dtp }}%</span>
                             </h4>
-                            <h5>Earnings -</h5>
+                            <h5>Ganancias</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-12 col-md-12 col-lg-12 col-xl-7">
                 <div class="card">
                     <div class="card-body">
                         <div class="chart-title patient-visit mb-0">
-                            <h4>Income</h4>
+                            <h4>Recaudación</h4>
                             <div class="income-value" >
                                 <h3><span>$</span> 20,560</h3>
-                                <p><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>40%</span> vs last month</p>
+                                <p><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>40%</span> vs mes pasado</p>
                             </div>
                             <div class="form-group mb-0">
                                  <mat-select [(ngModel)]="selectedValue" class="form-control select"  placeholder="2022">
@@ -157,14 +125,14 @@
                 <div class="struct-point">
                     <div class="card patient-structure">
                         <div class="card-body">
-                            <h5>New Patients</h5>
-                            <h3>56<span class="status-green"><img src="assets/img/icons/sort-icon-01.svg" alt="" class="me-1">60%</span></h3>
+                            <h5>Nuevos Pacientes</h5>
+                            <h3>5<span class="status-green"><img src="assets/img/icons/sort-icon-01.svg" alt="" class="me-1"></span></h3>
                         </div>
                     </div>
                     <div class="card patient-structure">
                         <div class="card-body">
-                            <h5>Old Patients</h5>
-                            <h3>35<span class="status-pink"><img src="assets/img/icons/sort-icon-02.svg" alt="" class="me-1">-20%</span></h3>
+                            <h5>Pacientes Antiguos</h5>
+                            <h3>3<span class="status-pink"><img src="assets/img/icons/sort-icon-02.svg" alt="" class="me-1"></span></h3>
                         </div>
                     </div>
                 </div>
@@ -175,7 +143,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="chart-title patient-visit">
-                            <h4>Activity Chart</h4>
+                            <h4>Actividad</h4>
                             <div >
                                 <ul class="nav chat-user-total">
                                     <li><i class="fa fa-circle low-users" aria-hidden="true"></i>Low</li>
@@ -239,7 +207,7 @@
             <div class="col-12 col-lg-12 col-xl-5 d-flex">
                 <div class="card flex-fill comman-shadow">
                     <div class="card-header">
-                        <h4 class="card-title d-inline-block">Recent Appointments</h4> <a [routerLink]="routes.appointmentList" class="patient-views float-end">Show all</a>
+                        <h4 class="card-title d-inline-block">Proximas citas</h4> <a [routerLink]="routes.appointmentList" class="patient-views float-end">Show all</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -247,11 +215,11 @@
                             <table matSort  class="table mb-0 border-0 datatable custom-table patient-profile-table">
                                 <thead>
                                     <tr>
-                                        <th mat-sort-header="date">Date</th>
+                                        <th mat-sort-header="date">Fecha</th>
                                         <th mat-sort-header="doctor">Doctor</th>
-                                        <th mat-sort-header="status">Status</th>
-                                        <th mat-sort-header="status_pay">Status Pay</th>
-                                        <th mat-sort-header="charges">Charges ($)</th>
+                                        <th mat-sort-header="status">Estado</th>
+                                        <th mat-sort-header="status_pay">Estado Pago</th>
+                                        <th mat-sort-header="charges">Monto</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -265,12 +233,12 @@
                                         <td> 
                                             <button [ngClass]="{'status-green' : data.status_pay === 1, 'status-pink' : data.status_pay === 2}" class="custom-badge">{{data.status_pay == 1 ? 'PAGADO' : 'DEUDA'}}</button>
                                         </td>
-                                        <td>{{data.amount }} PEN</td>
+                                        <td>{{data.amount }} CLP</td>
                                         <td class="text-end">
                                             <div class="dropdown dropdown-action">
                                                 <a href="javascript:void(0);" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" [routerLink]="[ '/appointment-m/list/edit/', data.id ]"><i class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
+                                                    <a class="dropdown-item" [routerLink]="[ '/appointment-m/list/edit/', data.id ]"><i class="fa-solid fa-pen-to-square m-r-5"></i> Editar</a>
                                                     <!-- <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_appointment"><i class="fa fa-trash-alt m-r-5"></i> Delete</a> -->
                                                 </div>
                                             </div>

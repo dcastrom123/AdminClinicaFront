@@ -43,7 +43,7 @@ export class DoctorMProfileComponent {
       console.log(resp);
       this.doctor_id = resp.id;
     })
-    this.doctorService.profileDoctor(this.doctor_id).subscribe((resp:any) => {
+    this.doctorService.showDoctor(this.doctor_id).subscribe((resp:any) => {
       console.log(resp);
       this.num_appointment = resp.num_appointment;
       this.money_of_appointments = resp.money_of_appointments;

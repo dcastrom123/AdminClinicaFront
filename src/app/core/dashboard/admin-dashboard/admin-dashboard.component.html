@@ -19,8 +19,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="morning-user">
-                        <h2>Good Morning, <span>{{ user.name + ' ' + user.surname }}</span></h2>
-                        <p>Have a nice day at work</p>
+                        <h2>Bienvenido, <span>{{ user.name + ' ' + user.surname }}</span></h2>
+                        <p></p>
                     </div>
                 </div>
                 <div class="col-md-6 position-blk">
@@ -38,11 +38,11 @@
                         <img src="assets/img/icons/calendar.svg" alt="">
                     </div>
                     <div class="dash-content dash-count">
-                        <h4>Appointments</h4>
+                        <h4>Reservas Realizadas</h4>
                         <!-- [countUp]="250" [options]="{duration: 10}" -->
                         <h2><span class="counter-up" >{{ num_appointments_current }}/ <small>{{ num_appointments_before }}</small> </span></h2>
                         <p *ngIf="porcentaje_d >= 0"><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>{{ porcentaje_d }}%</span> vs last month</p>
-                        <p *ngIf="porcentaje_d < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_d }}%</span> vs last month</p>
+                        <p *ngIf="porcentaje_d < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_d }}%</span> vs mes anterior</p>
                     </div>
                 </div>
             </div>
@@ -52,39 +52,26 @@
                         <img src="assets/img/icons/profile-add.svg" alt="">
                     </div>
                     <div class="dash-content dash-count">
-                        <h4>New Patients</h4>
+                        <h4>Nuevos Pacientes</h4>
                         <!-- [countUp]="140" [options]="{duration: 10}" -->
                         <h2><span class="counter-up" >{{ num_patients_current }}/ <small>{{ num_patients_before }}</small> </span></h2>
                         <p *ngIf="porcentaje_dp >= 0"><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>{{ porcentaje_dp }}%</span> vs last month</p>
-                        <p *ngIf="porcentaje_dp < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_dp }}%</span> vs last month</p>
+                        <p *ngIf="porcentaje_dp < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_dp }}%</span> vs mes anterior</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
-                <div class="dash-widget">
-                    <div class="dash-boxs comman-flex-center">
-                        <img src="assets/img/icons/scissor.svg" alt="">
-                    </div>
-                    <div class="dash-content dash-count">
-                        <h4>Operations</h4>
-                        <!-- [countUp]="56" [options]="{duration: 10}" -->
-                        <h2><span class="counter-up" >{{ num_appointments_attetion_current }}/ <small>{{ num_appointments_attetion_before }}</small> </span></h2>
-                        <p *ngIf="porcentaje_da >= 0"><span class="passive-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_da }}%</span> vs last month</p>
-                        <p *ngIf="porcentaje_da < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_da }}%</span> vs last month</p>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-md-6 col-sm-6 col-lg-6 col-xl-3">
                 <div class="dash-widget">
                     <div class="dash-boxs comman-flex-center">
                         <img src="assets/img/icons/empty-wallet.svg" alt="">
                     </div>
                     <div class="dash-content dash-count">
-                        <h4>Earnings</h4>
+                        <h4>Ganancias</h4>
                         <!-- [countUp]="20250" [options]="{duration: 10}" -->
                         <h2>$<span class="counter-up" > {{ appointments_total_current }}/ <small>{{ appointments_total_before }}</small> </span></h2>
                         <p *ngIf="porcentaje_dt >= 0"><span class="passive-view"><i class="feather icon-arrow-up-right me-1"></i>{{ porcentaje_dt }}%</span> vs last month</p>
-                        <p *ngIf="porcentaje_dt < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_dt }}%</span> vs last month</p>
+                        <p *ngIf="porcentaje_dt < 0"><span class="negative-view"><i class="feather icon-arrow-down-right me-1"></i>{{ porcentaje_dt }}%</span> vs mes anterior</p>
                     </div>
                 </div>
             </div>
@@ -94,11 +81,11 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="chart-title patient-visit">
-                            <h4>Patient Visit by Gender</h4>
+                            <h4>Asistencia de pacientes por Genero</h4>
                             <div >
                                 <ul class="nav chat-user-total">
-                                    <li><i class="fa fa-circle current-users" aria-hidden="true"></i>Male 75%</li>
-                                    <li><i class="fa fa-circle old-users" aria-hidden="true"></i> Female 25%</li>
+                                    <li><i class="fa fa-circle current-users" aria-hidden="true"></i>Hombres 65%</li>
+                                    <li><i class="fa fa-circle old-users" aria-hidden="true"></i> Mujeres 35%</li>
                                 </ul>
                             </div>
                             <div class="form-group mb-0">
@@ -146,7 +133,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="chart-title">
-                            <h4>Patient by Department</h4>
+                            <h4>Especialidades</h4>
                         </div>	
                         <div id="donut-chart-dash" class="chart-user-icon">
                             <apx-chart class="donut-chart-custom"
@@ -163,6 +150,7 @@
             </div>
         </div>
         <div class="row" *ngIf="user.roles.includes('Super-Admin') || user.permissions.includes('admin_dashboard')">
+            <!-- 
             <div class="col-12 col-md-12  col-xl-4">
                 <div class="card top-departments">
                     <div class="card-header">
@@ -178,7 +166,7 @@
                                 <p>{{ query_patients_spec.percentage }}%</p>
                             </div>
                         </div>
-                        <!-- <div class="activity-top">
+                        <-- <div class="activity-top">
                             <div class="activity-boxs comman-flex-center">
                                 <img src="assets/img/icons/dep-icon-02.svg" alt="">
                             </div>
@@ -213,14 +201,14 @@
                                 <h4>Opthomology</h4>
                                 <p>20%</p>
                             </div>
-                        </div> -->
+                        </div> --
                     </div>
                 </div>
-            </div>
+            </div>-->
             <div class="col-12 col-md-12  col-xl-8">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title ">Appointment Pendings</h4>
+                        <h4 class="card-title ">Reservas pendientes</h4>
                     </div>
                     <div class="card-body p-0 table-dash">
                         <div class="table-responsive">
@@ -228,11 +216,11 @@
                             <table matSort  class="table mb-0 border-0 datatable custom-table patient-profile-table">
                                 <thead>
                                     <tr>
-                                        <th mat-sort-header="date">Date</th>
+                                        <th mat-sort-header="date">Fecha</th>
                                         <th mat-sort-header="doctor">Doctor</th>
-                                        <th mat-sort-header="status">Status</th>
-                                        <th mat-sort-header="status_pay">Status Pay</th>
-                                        <th mat-sort-header="charges">Charges ($)</th>
+                                        <th mat-sort-header="status">Estado</th>
+                                        <th mat-sort-header="status_pay">Estado Pago</th>
+                                        <th mat-sort-header="charges">Monto</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -246,12 +234,12 @@
                                         <td> 
                                             <button [ngClass]="{'status-green' : data.status_pay === 1, 'status-pink' : data.status_pay === 2}" class="custom-badge">{{data.status_pay == 1 ? 'PAGADO' : 'DEUDA'}}</button>
                                         </td>
-                                        <td>{{data.amount }} PEN</td>
+                                        <td>{{data.amount }} CLP</td>
                                         <td class="text-end">
                                             <div class="dropdown dropdown-action">
                                                 <a href="javascript:void(0);" class="action-icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" [routerLink]="[ '/appointment-m/list/edit/', data.id ]"><i class="fa-solid fa-pen-to-square m-r-5"></i> Edit</a>
+                                                    <a class="dropdown-item" [routerLink]="[ '/appointment-m/list/edit/', data.id ]"><i class="fa-solid fa-pen-to-square m-r-5"></i> Editar</a>
                                                     <!-- <a class="dropdown-item" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#delete_appointment"><i class="fa fa-trash-alt m-r-5"></i> Delete</a> -->
                                                 </div>
                                             </div>

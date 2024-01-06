@@ -268,23 +268,23 @@ export class DataService {
               show_nav: false,
             },
           ],
-        },/*
+        },
         {
-          menuValue: 'Staff',
+          menuValue: 'Usuarios',
           hasSubRoute: true,
           showSubRoute: false,
           base: 'staffs',
           img: 'assets/img/icons/menu-icon-08.svg',
           subMenus: [
             {
-              menuValue: 'Staff List',
+              menuValue: 'Listar Usuarios',
               route: routes.staffList,
               base: routes.staffList,
               permision: 'list_staff',
               show_nav: true,
             },
             {
-              menuValue: 'Add Staff',
+              menuValue: 'Agregar Usuario',
               route: routes.addStaff,
               base: routes.addStaff,
               permision: 'register_staff',
@@ -310,7 +310,7 @@ export class DataService {
             //   base: routes.staffAttendance,
             // },
           ],
-        },*/
+        },
         {
           menuValue: 'Especialidades',
           hasSubRoute: true,
@@ -432,7 +432,7 @@ export class DataService {
               route: '',
               base: '',
               permision: 'profile_patient',
-              show_nav: true,
+              show_nav: false,
             },
           ],
         },

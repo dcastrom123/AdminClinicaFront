@@ -23,7 +23,15 @@ export class PatientMProfileComponent {
     public patientService: PatientMService,
     public activedRoute: ActivatedRoute,
   ) {
-    
+    this.patientProfile = [];
+    this.option_selected = 1;
+    this.patient_id = '';
+    this.num_appointment = 0;
+    this.money_of_appointments = 0;
+    this.num_appointment_pendings = 0;
+    this.patient_selected = null; // Inicializado a null o un objeto vacío según tus necesidades
+    this.appointment_pendings = [];
+    this.appointments = [];
   }
 
   ngOnInit(): void {
@@ -33,7 +41,7 @@ export class PatientMProfileComponent {
       console.log(resp);
       this.patient_id = resp.id;
     })
-    this.patientService.profilePatient(this.patient_id).subscribe((resp:any) => {
+    this.patientService.showPatient(this.patient_id).subscribe((resp:any) => {
       console.log(resp);
       this.num_appointment = resp.num_appointment;
       this.money_of_appointments = resp.money_of_appointments;
