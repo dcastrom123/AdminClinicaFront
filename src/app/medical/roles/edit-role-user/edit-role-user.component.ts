@@ -67,7 +67,7 @@ export class EditRoleUserComponent {
     };
     this.valid_form_success = false;
     this.text_validation = null;
-    this.RoleService.editRoles(data,this.role_id).subscribe((resp:any) => {
+    this.RoleService.storeRoles(data).subscribe((resp:any) => {
       console.log(resp);
       if(resp.message == 403){
         this.text_validation = resp.message_text;

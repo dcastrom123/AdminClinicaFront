@@ -384,9 +384,9 @@ export class DataService {
               show_nav: false,
             },
             {
-              menuValue: 'Doctor Profile',
-              route: '',
-              base: '',
+              menuValue: 'Perfil Doctor',
+              route: routes.doctorProfile,
+              base: routes.doctorProfile,
               permision: 'profile_doctor',
               show_nav: false,
             },
